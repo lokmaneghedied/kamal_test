@@ -6,7 +6,15 @@ image: lokmaneghedied/kamal_test
 
 # Deploy to these servers.
 servers:
-  - 20.199.12.5
+  web:
+    hosts:
+      - 20.199.12.5
+    options:
+      "add-host": host.docker.internal:host-gateway
+    labels:
+      traefik.http.routers.site2-web.entrypoints: websecure
+      traefik.http.routers.site2-web.rule: Host(`kamal.test`)
+      traefik.http.routers.site2-web.tls.certresolver: letsencrypt
 
 # Credentials for your image host.
 registry:
