@@ -65,10 +65,14 @@ builder:
 #       - data:/data
 
 # Configure custom arguments for Traefik
-# traefik:
-#   args:
-#     accesslog: true
-#     accesslog.format: json
+traefik:
+  name: traefik-kamal_test
+  host_port: 7001
+  args:
+    entrypoints.kamal_test-web.address: ':80'
+
+labels:
+  traefik.http.routers.kamal_test-web.entrypoints: kamal_test-web
 
 # Configure a custom healthcheck (default is /up on port 3000)
 healthcheck:
