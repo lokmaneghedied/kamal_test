@@ -23,8 +23,8 @@ registry:
 env:
   clear:
     APP_VERSION: 2
-#   secret:
-#     - RAILS_MASTER_KEY
+  secret:
+  - KAMAL_REGISTRY_PASSWORD
 
 # Use a different ssh user than root
 ssh:
