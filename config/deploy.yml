@@ -10,10 +10,10 @@ servers:
     hosts:
       - 20.199.12.5
     options:
-      "kamal.test": host.docker.internal:host-gateway
+      "add-host": host.docker.internal:host-gateway
     labels:
       traefik.http.routers.rails_recipes.entrypoints: websecure
-      traefik.http.routers.rails_recipes.rule: Host(`rails.recipes`)
+      traefik.http.routers.rails_recipes.rule: Host(`kamaltest.com`)
       traefik.http.routers.rails_recipes.tls.certresolver: letsencrypt
 
 # Credentials for your image host.
