@@ -75,14 +75,14 @@ builder:
 traefik:
   options:
     publish:
-      - "443:443"
+      - "80:80"
+      - "8080:8080"
     volume:
       - "/letsencrypt/acme.json:/letsencrypt/acme.json"
   args:
     entryPoints.web.address: ":80"
     entryPoints.websecure.address: ":443"
     entryPoints.web.http.redirections.entryPoint.to: websecure
-    entryPoints.web.http.redirections.entryPoint.scheme: https
     entryPoints.web.http.redirections.entrypoint.permanent: true
     certificatesResolvers.letsencrypt.acme.email: "lokmangh@gmail.com"
     certificatesResolvers.letsencrypt.acme.storage: "/letsencrypt/acme.json"
