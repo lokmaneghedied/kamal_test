@@ -13,7 +13,7 @@ servers:
       "add-host": host.docker.internal:host-gateway
     labels:
       traefik.http.routers.rails_recipes.entrypoints: websecure
-      traefik.http.routers.rails_recipes.rule: Host(`kamaltest.com`)
+      traefik.http.routers.rails_recipes.rule: Host(`kamaltest`)
       traefik.http.routers.rails_recipes.tls.certresolver: letsencrypt
 
 # Credentials for your image host.
