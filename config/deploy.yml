@@ -12,9 +12,9 @@ servers:
     options:
       "add-host": host.docker.internal:host-gateway
     labels:
-      traefik.http.routers.test_kamal.entrypoints: websecure
-      traefik.http.routers.test_kamal.rule: Host(`test.kamal`)
-      traefik.http.routers.test_kamal.tls.certresolver: letsencrypt
+      traefik.http.routers.kamal_test.entrypoints: websecure
+      traefik.http.routers.kamal_test.rule: Host(`test.kamal`)
+      traefik.http.routers.kamal_test.tls.certresolver: letsencrypt
 # Credentials for your image host.
 registry:
   # Specify the registry server, if you're not using Docker Hub
